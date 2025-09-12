@@ -1,6 +1,6 @@
 # TPC-DS Benchmark in DuckDB
 
-This repo contains resources and scripts for running TPC-DS benchmarks using DuckDB, instead of [DuckDB's native TPC-DS extension](https://duckdb.org/docs/stable/core_extensions/tpcds.html).
+This repo contains resources and scripts for running TPC-DS benchmarks using DuckDB, directly using *.dat* TPC-DS tables instead of [DuckDB's native TPC-DS extension](https://duckdb.org/docs/stable/core_extensions/tpcds.html).
 
 ## ...btw, why don't we use DuckDB's extension?
 
