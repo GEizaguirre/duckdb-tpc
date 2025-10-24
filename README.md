@@ -60,22 +60,26 @@ Checking the expected result of a TPC-DS query may not be straightforward. That'
 3. **Generate TPC-DS tables**  
     Use the provided script to generate the TPC-DS tables.
     ```bash
-    .generate_data.sh
+    .generate_data_tpc-ds.sh
     ```
 
 4. **Create the database**  
     Create the DuckDB database.
     ```bash
-    import_tpcds.sh
+    .import_tpc-ds.sh
     ```
 
 5. **Run queries**
 
     You can either run all queries.
     ```bash
-    run_queries_tpcds.sh
+    .run_queries_tpc-ds.sh
     ```
     Or run a specific query.
     ```bash
-    run_queries_tpcds.sh 94
+    .run_queries_tpc-ds.sh 94
     ```
+
+## What's more
+
+We also provide equivalent scripts and resources for TPC-H queries!

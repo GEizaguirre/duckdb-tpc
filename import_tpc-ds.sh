@@ -2,11 +2,11 @@
 
 
 # Path to your DuckDB database file
-DB_FILE="tpcds_sf1.duckdb"
+DB_FILE="tpc-ds-sf1.duckdb"
 # Path to the directory containing the .dat files
-DATA_DIR="./data-sf1"
+DATA_DIR="./data-tpc-ds-sf1"
 # Path to the DDL file for creating tables
-DDL_FILE="tpcds.sql"
+DDL_FILE="tpc-ds.sql"
 
 if [ -f "$DB_FILE" ]; then
     rm "$DB_FILE"

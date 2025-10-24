@@ -2,10 +2,10 @@
 
 if [ "$#" -eq 0 ]; then
   echo "No query number provided. Running all queries..."
-  QUERY_FILES=("queries/"*.sql)
+  QUERY_FILES=("queries-tpc-ds/"*.sql)
 elif [ "$#" -eq 1 ]; then
   QUERY_NUMBER=$1
-  QUERY_FILE="queries/query${QUERY_NUMBER}.sql"
+  QUERY_FILE="queries-tpc-ds/query${QUERY_NUMBER}.sql"
 
   if [ ! -f "$QUERY_FILE" ]; then
     echo "Error: Query file '$QUERY_FILE' does not exist."
@@ -20,7 +20,7 @@ fi
 
 echo "Preparing to run queries..."
 
-DB_FILE="tpcds_sf1.duckdb"
+DB_FILE="tpc-ds-sf1.duckdb"
 
 echo "Listing tables in the database '$DB_FILE'..."
 duckdb "$DB_FILE" -c ".tables"

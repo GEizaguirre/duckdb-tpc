@@ -7,11 +7,11 @@ FROM     catalog_sales cs1 ,
          date_dim ,
          customer_address ,
          call_center
-WHERE    d_date BETWEEN '2002-3-01' AND      (
-                  Cast('2002-3-01' AS DATE) + INTERVAL '60' day)
+WHERE    d_date BETWEEN '2002-2-01' AND      (
+                  Cast('2002-2-01' AS DATE) + INTERVAL '60' day)
 AND      cs1.cs_ship_date_sk = d_date_sk
 AND      cs1.cs_ship_addr_sk = ca_address_sk
-AND      ca_state = 'IA'
+AND      ca_state = 'GA'
 AND      cs1.cs_call_center_sk = cc_call_center_sk
 AND      cc_county IN ('Williamson County',
                        'Williamson County',
