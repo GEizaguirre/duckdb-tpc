@@ -19,8 +19,8 @@ WHERE
     AND l_shipmode IN ('MAIL', 'SHIP')
     AND l_commitdate < l_receiptdate
     AND l_shipdate < l_commitdate
-    AND l_receiptdate >= DATE '1994-01-01'
-    AND l_receiptdate < DATE '1994-01-01' + INTERVAL 1 YEAR
+    AND l_receiptdate BETWEEN '1994-01-01'
+    AND (Cast('1994-01-01' AS DATE) + INTERVAL 1 YEAR)
 GROUP BY
     l_shipmode
 ORDER BY

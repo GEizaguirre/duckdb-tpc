@@ -5,7 +5,7 @@ if [ "$#" -eq 0 ]; then
   QUERY_FILES=("queries-tpc-h/"*.sql)
 elif [ "$#" -eq 1 ]; then
   QUERY_NUMBER=$1
-  QUERY_FILE="queries-tpc-h/query${QUERY_NUMBER}.sql"
+  QUERY_FILE="queries-tpc-h/${QUERY_NUMBER}.sql"
 
   if [ ! -f "$QUERY_FILE" ]; then
     echo "Error: Query file '$QUERY_FILE' does not exist."

@@ -14,7 +14,7 @@ SELECT
 FROM
     lineitem
 WHERE
-    l_shipdate <= DATE '1998-12-01' - INTERVAL 90 DAY
+    l_shipdate BETWEEN (Cast('1998-12-01' AS DATE) - INTERVAL 90 DAY) AND '1998-12-01'
 GROUP BY
     l_returnflag,
     l_linestatus

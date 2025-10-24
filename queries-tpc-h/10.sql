@@ -16,8 +16,8 @@ FROM
 WHERE
     c_custkey = o_custkey
     AND l_orderkey = o_orderkey
-    AND o_orderdate >= DATE '1993-10-01'
-    AND o_orderdate < DATE '1993-10-01' + INTERVAL 3 MONTH
+    AND o_orderdate BETWEEN '1993-10-01'
+    AND (Cast('1993-10-01' AS DATE) + INTERVAL 3 MONTH)
     AND l_returnflag = 'R'
     AND c_nationkey = n_nationkey
 GROUP BY

@@ -17,8 +17,8 @@ WHERE
     AND s_nationkey = n_nationkey
     AND n_regionkey = r_regionkey
     AND r_name = 'ASIA'
-    AND o_orderdate >= DATE '1994-01-01'
-    AND o_orderdate < DATE '1994-01-01' + INTERVAL 1 YEAR
+    AND o_orderdate BETWEEN '1994-01-01'
+    AND (Cast('1994-01-01' AS DATE) + INTERVAL 1 YEAR)
 GROUP BY
     n_name
 ORDER BY
