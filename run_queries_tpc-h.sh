@@ -36,8 +36,7 @@ for QUERY_FILE in "${QUERY_FILES[@]}"; do
   echo "--- Running query from $QUERY_FILE ---"
 
   QUERY_STRING=$(sed 's/`/"/g' "$QUERY_FILE")
-
-  duckdb "$DB_FILE" -c "$QUERY_STRING"
+  duckdb "$DB_FILE" -c ".mode column" -c "$QUERY_STRING"
 
 
   if [ $? -ne 0 ]; then
